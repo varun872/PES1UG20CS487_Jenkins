@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Run build commands here
                 sh 'g++ -o PES1UG20CS487 ./main/new.cpp'
-                build item:"PES1UG20CS487-1"
+                build job:"PES1UG20CS487-1"
             }
         }
         stage('Test') {
@@ -18,6 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Run deployment commands here
+                sh 'echo "Deployed!!"'
             }
         }
         stage('Push') {
@@ -31,10 +32,10 @@ pipeline {
     
     post {
         always {
-            echo 'Pipeline finished'
+            sh 'echo "Pipeline finished"'
         }
         failure {
-            echo 'Pipeline failed'
+            sh 'echo "Pipeline failed"'
         }
     }
 }
