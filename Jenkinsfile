@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Run build commands here
                 sh 'g++ -o PES1UG20CS487 ./main/new.cpp'
-                build job:"PES1UG20CS487-1"
+                build job:"PES1UG20CS487-3"
             }
         }
         stage('Test') {
