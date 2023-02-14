@@ -21,13 +21,6 @@ pipeline {
                 sh 'echo "Deployed!!"'
             }
         }
-        stage('Push') {
-            steps {
-                sh 'git add new.cpp'
-                sh 'git commit -m "Add new file"'
-                sh 'git push'
-            }
-        }
     }
     
     post {
