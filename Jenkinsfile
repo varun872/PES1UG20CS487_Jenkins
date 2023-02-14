@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 // Run build commands here
-                sh 'g++ -o PES1UG20CS487 new.cpp'
-                build 'item:"PES1UG20CS487-1"'
+                sh 'g++ -o PES1UG20CS487 ./main/new.cpp'
+                build item:"PES1UG20CS487-1"
             }
         }
         stage('Test') {
